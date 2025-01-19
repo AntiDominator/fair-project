@@ -3,6 +3,7 @@ Periodic Table Website
 Welcome to the Periodic Table Website! This project provides an interactive and visually appealing periodic table of elements, designed to be both educational and engaging.
 
 🌟 Features:
+
 Interactive Elements: Hover over or click on elements to reveal detailed information.
 
 Responsive Design: Works seamlessly across devices, including desktops, tablets, and smartphones.
