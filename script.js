@@ -1243,13 +1243,13 @@ function toggleLanguage() {
        // Switch to English
        nameElement.textContent = element.name.en;
        infoElement.textContent = element.info.en;
-       translateBtn.textContent = "বাংলায় দেখুন";
+       translateBtn.textContent = "বাংলায়";
        isInBangla = false;
    } else {
        // Switch to Bangla
        nameElement.textContent = element.name.bn;
        infoElement.textContent = element.info.bn;
-       translateBtn.textContent = "English এ দেখুন";
+       translateBtn.textContent = "English";
        isInBangla = true;
    }
 }
@@ -1264,7 +1264,7 @@ function openModal(index) {
    
    nameElement.textContent = elementInfos[index].name.en;
    infoElement.textContent = elementInfos[index].info.en;
-   translateBtn.textContent = "বাংলায় দেখুন";
+   translateBtn.textContent = "বাংলায়";
    
    modal.style.display = "flex";
 }
