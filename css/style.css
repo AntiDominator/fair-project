@@ -4424,31 +4424,86 @@ body {
   top: 20px;
   left: 20px;
 }
-/* Default Dark Theme */
-body.dark {
-  background-color: #121212;
-  color: #eee;
+#translateBtn {
+  top: 50px;
+  left:30px;
 }
 
-body.dark .element .square {
-  background-color: #1e1e1e;
-  color: #fff;
-  border: 1px solid #333;
-}
-
-/* Light Theme */
+/* --- LIGHT THEME VERSION OF ORIGINAL --- */
+/* Light theme: just invert everything */
+/* --- LIGHT THEME VERSION - BACKGROUND ONLY --- */
+/* --- LIGHT THEME VERSION - BACKGROUND ONLY --- */
+/* --- IMPROVED LIGHT THEME - BASED ON PERIODIC TABLE DESIGN --- */
+/* --- IMPROVED LIGHT THEME - BASED ON PERIODIC TABLE DESIGN --- */
 body.light {
-  background-color: #f5f5f5;
-  color: #000;
+  background-color: #ffffff;  /* clean white background */
+  color: #333333;             /* softer dark text for better readability */
 }
 
+/* Keep elements with their original vibrant colors and styling */
 body.light .element .square {
-  background-color: #ffffff;
-  color: #000;
-  border: 1px solid #ccc;
+  /* Maintain original background colors for each element type */
+  /* Keep original text colors for optimal contrast on colored backgrounds */
+  /* Preserve original borders for element definition */
+  
+  /* Optional: Add slight shadow for better definition on white background */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-/* Transition for smooth switch */
-body, .element .square {
-  transition: background-color 0.3s ease, color 0.3s ease;
+/* Clean white modal with proper contrast */
+body.light #isolatedModal {
+  background: #ffffff;        /* clean white background */
+  color: #333333;             /* readable dark text */
+  border: 2px solid #ddd;     /* subtle border */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* modern shadow */
+}
+
+/* Theme switch button positioned at top middle */
+/* Theme switch button positioned at top middle */
+/* Center the theme switch button at the top */
+#theme-toggle {
+  top: 20px;          /* distance from top */
+  left: 50%;
+  transform: translateX(-50%);          /* move to horizontal center */
+}
+
+.theme-switch-button:hover,
+.switch-theme:hover {
+  background: #e9e9e9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* General buttons with better contrast for light theme */
+body.light .glowing-button {
+  background: #f5f5f5;        /* light gray background */
+  color: #333333;             /* dark readable text */
+  border: 1px solid #ddd;     /* subtle border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+body.light .glowing-button:hover,
+body.light .theme-switch-button:hover,
+body.light .switch-theme:hover {
+  background: #e9e9e9;        /* slightly darker on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* enhanced shadow on hover */
+}
+
+/* Category labels and text elements */
+body.light .category-label,
+body.light .info-text {
+  color: #555555;             /* medium gray for secondary text */
+}
+
+/* Navigation and UI elements */
+body.light .nav-element {
+  background: #f8f8f8;        /* very light gray */
+  color: #333333;             /* dark text */
+  border: 1px solid #e0e0e0;  /* light border */
+}
+
+/* Smooth transitions for all interactive elements */
+body, .element .square, #isolatedModal, .glowing-button, .nav-element, .theme-switch-button, .switch-theme {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
