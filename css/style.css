@@ -4453,7 +4453,8 @@ body.light .element .square {
 /* Clean white modal with proper contrast */
 body.light #isolatedModal {
   background: #ffffff;        /* clean white background */
-  color: #333333;             /* readable dark text */
+  color: #333333;
+  opacity: 0.85;              /* readable dark text */
   border: 2px solid #ddd;     /* subtle border */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* modern shadow */
 }
