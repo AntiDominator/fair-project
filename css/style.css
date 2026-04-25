@@ -4428,6 +4428,10 @@ body {
   top: 50px;
   left:30px;
 }
+#glowing-button-mid {
+  top: 20px;
+  left: 20px;
+}
 
 /* --- LIGHT THEME VERSION OF ORIGINAL --- */
 /* Light theme: just invert everything */
