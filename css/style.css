@@ -4440,75 +4440,115 @@ body {
 /* --- IMPROVED LIGHT THEME - BASED ON PERIODIC TABLE DESIGN --- */
 /* --- IMPROVED LIGHT THEME - BASED ON PERIODIC TABLE DESIGN --- */
 body.light {
-  background-color: #ffffff;  /* clean white background */
-  color: #333333;             /* softer dark text for better readability */
-}
-
-/* Keep elements with their original vibrant colors and styling */
-body.light .element .square {
-  /* Maintain original background colors for each element type */
-  /* Keep original text colors for optimal contrast on colored backgrounds */
-  /* Preserve original borders for element definition */
-  
-  /* Optional: Add slight shadow for better definition on white background */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-/* Clean white modal with proper contrast */
-body.light #isolatedModal {
-  background: #ffffff;        /* clean white background */
+  /* Use gradient instead of flat color so background system stays intact */
+  background: linear-gradient(155deg, #ffffff 0%, #f5f5f5 55%, #eeeeee 100%);
   color: #333333;
-  opacity: 0.85;              /* readable dark text */
-  border: 2px solid #ddd;     /* subtle border */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* modern shadow */
+
+  /* Adjust background accent colors for visibility */
+  --pink: #ec4899;
+  --pink-d: #db2777;
 }
 
-/* Theme switch button positioned at top middle */
-/* Theme switch button positioned at top middle */
-/* Center the theme switch button at the top */
+/* ===== ELEMENT CARDS ===== */
+body.light .element .square {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12),
+              0 1px 2px rgba(0,0,0,0.24);
+}
+
+/* ===== MODAL ===== */
+body.light #isolatedModal {
+  background: #ffffff;
+  color: #333333;
+  opacity: 0.95;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* ===== THEME BUTTON POSITION ===== */
 #theme-toggle {
-  top: 20px;          /* distance from top */
+  top: 20px;
   left: 50%;
-  transform: translateX(-50%);          /* move to horizontal center */
+  transform: translateX(-50%);
 }
 
-.theme-switch-button:hover,
-.switch-theme:hover {
-  background: #e9e9e9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-
-
-/* General buttons with better contrast for light theme */
+/* ===== BUTTONS ===== */
 body.light .glowing-button {
-  background: #f5f5f5;        /* light gray background */
-  color: #333333;             /* dark readable text */
-  border: 1px solid #ddd;     /* subtle border */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  background: #f5f5f5;
+  color: #333333;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 body.light .glowing-button:hover,
 body.light .theme-switch-button:hover,
 body.light .switch-theme:hover {
-  background: #e9e9e9;        /* slightly darker on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* enhanced shadow on hover */
+  background: #e9e9e9;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-/* Category labels and text elements */
+/* ===== TEXT ===== */
 body.light .category-label,
 body.light .info-text {
-  color: #555555;             /* medium gray for secondary text */
+  color: #555555;
 }
 
-/* Navigation and UI elements */
+/* ===== NAV ===== */
 body.light .nav-element {
-  background: #f8f8f8;        /* very light gray */
-  color: #333333;             /* dark text */
-  border: 1px solid #e0e0e0;  /* light border */
+  background: #f8f8f8;
+  color: #333333;
+  border: 1px solid #e0e0e0;
 }
 
-/* Smooth transitions for all interactive elements */
-body, .element .square, #isolatedModal, .glowing-button, .nav-element, .theme-switch-button, .switch-theme {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+/* ===== BACKGROUND EFFECT ADJUSTMENTS ===== */
+
+/* Softer scan lines for light mode */
+body.light .scanLine {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(236,72,153,0.35),
+    transparent
+  );
+}
+
+/* Softer glow */
+body.light .chGlow {
+  background: radial-gradient(
+    ellipse at 75% 5%,
+    rgba(236,72,153,0.06),
+    transparent 55%
+  );
+}
+
+/* Subtle atoms for light background */
+body.light .nucleus {
+  box-shadow: 0 0 8px rgba(236,72,153,0.5);
+}
+
+body.light .orb1 {
+  border-color: rgba(236,72,153,0.5);
+}
+
+body.light .orb2 {
+  border-color: rgba(236,72,153,0.25);
+}
+
+body.light .elec {
+  box-shadow: 0 0 6px rgba(236,72,153,0.5);
+}
+
+/* ===== SMOOTH TRANSITIONS ===== */
+body,
+.element .square,
+#isolatedModal,
+.glowing-button,
+.nav-element,
+.theme-switch-button,
+.switch-theme {
+  transition:
+    background 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
